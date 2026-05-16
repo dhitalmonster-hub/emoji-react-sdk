@@ -1,0 +1,58 @@
+{
+  "name": "emoji-react-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for on-chain emoji reactions on the Stacks blockchain — react, aggregate, query top reactions.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:utils": "vitest run tests/utils.test.ts",
+    "test:contract": "vitest run tests/contract.test.ts",
+    "test:constants": "vitest run tests/constants.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "stacks",
+    "clarity",
+    "blockchain",
+    "sdk",
+    "emoji",
+    "reactions",
+    "social",
+    "engagement",
+    "web3"
+  ],
+  "author": "Emoji-React",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhitalmonster-hub/emoji-react-sdk"
+  },
+  "dependencies": {
+    "@stacks/transactions": "^6.12.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
